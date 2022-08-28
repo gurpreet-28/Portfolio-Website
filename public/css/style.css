@@ -1,0 +1,105 @@
+.navbar {
+  background-color: #004c3f;
+}
+.main-logo {
+  height: 60px;
+}
+.nav-item {
+  color: #004c3f;
+}
+.link {
+  color: #004c3f;
+}
+.nav-link {
+  color: #fbf7ed !important;
+  font-size: 1.2rem !important;
+}
+.ham-menu {
+  color: #008060 !important;
+}
+
+/* About */
+
+#about {
+  background-color: #fbf7ed;
+  padding: 0% 2%;
+  text-align: center;
+  height: 600px;
+}
+.name-div {
+  font-family: "Ubuntu";
+  padding: 10%;
+}
+.name {
+  font-size: 4rem;
+  color: #004c3f;
+  font-weight: 700;
+}
+.desc {
+  font-size: 1.5rem;
+}
+
+/* Projects */
+
+#projects {
+  background-color: #fbf7ed;
+  padding: 2%;
+  text-align: center;
+}
+.projects {
+  padding-top: 5%;
+}
+.card {
+  margin-top: 20px;
+  height: 150px !important;
+}
+.proj-card {
+  color: #fbf7ed !important;
+  background-color: #008060;
+}
+.git-img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Contact */
+
+#contact {
+  font-family: "Ubuntu";
+  padding: 7% 15% 4%;
+  background-color: #004c3f;
+  color: #fff;
+  text-align: center;
+}
+.social-icon {
+  color: #fff;
+  margin: 5px 10px;
+}
+.social-icon:hover {
+  color: #fff3d4;
+}
+
+/* Footer */
+
+#footer {
+  margin-top: auto;
+}
+
+@media (max-width: 990px) {
+  #about {
+    padding-top: 12%;
+    height: 500px;
+  }
+  .name {
+    font-size: 3rem;
+  }
+  .desc {
+    font-size: 1.2rem;
+  }
+  .img-div img {
+    display: none;
+  }
+  /* #contact {
+    padding: 10% 15% 4%;
+  } */
+}
