@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .navbar {
   background-color: #004c3f;
 }
@@ -19,7 +25,6 @@
 }
 
 /* About */
-
 #about {
   background-color: #fbf7ed;
   padding: 0% 2%;

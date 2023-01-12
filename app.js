@@ -1,3 +1,4 @@
+const env = require("dotenv");
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -9,7 +10,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 mongoose.connect(
-  "mongodb+srv://admin-gurpreet:Jimmy123@portfolio-contact-form.uhd1sym.mongodb.net/blogDB"
+  `mongodb+srv://admin-gurpreet:Jimmy123@portfolio-contact-form.uhd1sym.mongodb.net/blogDB`
 );
 
 const contactSchema = {
@@ -47,6 +48,10 @@ app.post("/form", (req, res) => {
   res.send("Your message has been delieverd!");
 });
 
-app.listen(port, () => {
-  console.log(`Server is listening at port ${port}`);
+app.listen(port, (err) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(`Server is listening at port ${port}`);
+  }
 });
