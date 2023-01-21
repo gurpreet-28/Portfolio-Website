@@ -1,16 +1,18 @@
-const env = require("dotenv");
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const env = require("dotenv");
 
+env.config();
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+const password = process.env.PASSWORD;
 mongoose.connect(
-  `mongodb+srv://admin-gurpreet:Jimmy123@portfolio-contact-form.uhd1sym.mongodb.net/blogDB`
+  `mongodb+srv://admin-gurpreet:${password}@portfolio-contact-form.uhd1sym.mongodb.net/blogDB?retryWrites=true&w=majority`
 );
 
 const contactSchema = {
