@@ -10,10 +10,7 @@ const port = process.env.PORT || 3000;
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const password = process.env.PASSWORD;
-mongoose.connect(
-  `mongodb+srv://admin-gurpreet:${password}@portfolio-contact-form.uhd1sym.mongodb.net/blogDB?retryWrites=true&w=majority`
-);
+mongoose.connect(process.env.MONGO_URI);
 
 const contactSchema = {
   firstName: String,
