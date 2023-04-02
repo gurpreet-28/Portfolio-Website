@@ -6,11 +6,13 @@ const env = require("dotenv");
 env.config();
 const app = express();
 const port = process.env.PORT || 3000;
+const key = process.env.MONGO_KEY;
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-mongoose.connect(process.env.MONGO_URI);
+const URI = `mongodb+srv://admin-gurpreet:${key}@portfolio-contact-form.uhd1sym.mongodb.net/blogDB?retryWrites=true&w=majority`;
+mongoose.connect(URI);
 
 const contactSchema = {
   firstName: String,
