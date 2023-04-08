@@ -1,115 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 :root {
-  --primary-color: #f22f46;
-  --primary-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --primary-color: #f2394f;
+  --secondary-color: #fafafa;
+}
+.head h1 {
+  color: rgba(0, 0, 0, 0.75);
+  font-weight: 600;
+}
+.head span {
+  color: var(--primary-color);
 }
 
-.navbar {
-  background-color: #004c3f;
+/* Header */
+.header {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.main-logo {
-  height: 60px;
+.res-btn {
+  border-color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+  border-radius: 20px !important;
 }
-.nav-item {
-  color: #004c3f;
-}
-.link {
-  color: #004c3f;
-}
-.nav-link {
-  color: #fbf7ed !important;
-  font-size: 1.2rem !important;
-}
-.ham-menu {
-  color: #008060 !important;
+.res-btn:hover {
+  background-color: var(--primary-color) !important;
+  color: white !important;
 }
 
-/* About */
-#about {
-  background-color: #fbf7ed;
-  padding: 0% 2%;
-  text-align: center;
-  height: 600px;
+/* About Section */
+.about {
+  color: white;
+  background-color: #f2394f;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 }
-.name-div {
-  font-family: "Ubuntu";
-  padding: 10%;
+
+/* Skills Sections */
+.skills {
+  background-color: var(--secondary-color);
 }
-.name {
+.skills .row div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.skills i {
   font-size: 4rem;
-  color: #004c3f;
-  font-weight: 700;
+  color: #4e4e4e;
 }
-.desc {
-  font-size: 1.5rem;
+.skills h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #4e4e4e;
 }
 
-/* Projects */
-
-#projects {
-  background-color: #fbf7ed;
-  padding: 2%;
+/* Projects Section */
+.portfolio-container .portfolio-box {
+  width: 100%;
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem gray;
+  overflow: hidden;
+  display: flex;
+}
+.portfolio-box img {
+  width: 100%;
+  transition: 0.5s ease;
+}
+.portfolio-box:hover img {
+  transform: scale(1.1);
+}
+.portfolio-box .portfolio-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--primary-color));
+}
+.portfolio-box .portfolio-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--primary-color));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
+  padding: 0 4rem;
+  transform: translateY(100%);
+  transition: 0.5s ease;
 }
-.projects {
-  padding-top: 5%;
+.portfolio-box:hover .portfolio-layer {
+  transform: translateY(0);
 }
-.card {
-  margin-top: 20px;
-  height: 150px !important;
-}
-.proj-card {
-  color: #fbf7ed !important;
-  background-color: #008060;
-}
-.git-img {
-  width: 20px;
-  height: 20px;
+.portfolio-layer,
+.portfolio-layer i {
+  color: white;
 }
 
-/* Contact */
+/* Contact Section */
+.contact {
+  background-color: var(--secondary-color);
+}
+.contact .container {
+  max-width: 700px;
+}
+.full-name {
+  width: 100%;
+}
+.email {
+  width: 100%;
+}
+.message {
+  width: 100%;
+}
+.form-btn {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  border-radius: 22px !important;
+}
+input,
+textarea {
+  font-size: 1.5rem;
+  border: 0.1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
 
-#contact {
-  font-family: "Ubuntu";
-  padding: 7% 15% 4%;
-  background-color: #004c3f;
+/* Footer */
+.footer {
+  background-color: var(--primary-color);
   color: #fff;
   text-align: center;
 }
 .social-icon {
   color: #fff;
-  margin: 5px 10px;
 }
 .social-icon:hover {
-  color: #fff3d4;
-}
-
-/* Footer */
-
-#footer {
-  margin-top: auto;
-}
-
-@media (max-width: 990px) {
-  #about {
-    padding-top: 12%;
-    height: 500px;
-  }
-  .name {
-    font-size: 3rem;
-  }
-  .desc {
-    font-size: 1.2rem;
-  }
-  .img-div img {
-    display: none;
-  }
-  /* #contact {
-    padding: 10% 15% 4%;
-  } */
+  color: var(--secondary-color);
 }
