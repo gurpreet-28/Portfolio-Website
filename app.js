@@ -6,7 +6,6 @@ const env = require("dotenv");
 env.config();
 const app = express();
 const port = process.env.PORT || 3000;
-const key = process.env.MONGO_KEY;
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -28,8 +27,8 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html");
 });
 
-app.get("/contactForm", (req, res) => {
-  res.sendFile(__dirname + "/views/contactForm.html");
+app.get("/success", (req, res) => {
+  res.sendFile(__dirname + "/views/success.html");
 });
 
 app.post("/form", (req, res) => {
@@ -47,7 +46,7 @@ app.post("/form", (req, res) => {
 
   newContact.save();
 
-  res.send("Your message has been delieverd!");
+  res.redirect("/success");
 });
 
 app.listen(port, (err) => {

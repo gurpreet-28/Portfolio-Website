@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
 
 * {
   margin: 0;
@@ -40,7 +39,14 @@
 .about {
   color: white;
   background-color: #f2394f;
-  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");
+}
+.about h1 {
+  font-size: 3.5rem;
+}
+.about p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 /* Skills Sections */
