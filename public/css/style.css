@@ -10,6 +10,9 @@
   --primary-color: #f2394f;
   --secondary-color: #fafafa;
 }
+.initials {
+  cursor: pointer;
+}
 .head h1 {
   color: rgba(0, 0, 0, 0.75);
   font-weight: 600;
